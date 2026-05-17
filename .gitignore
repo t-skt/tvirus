@@ -23,3 +23,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# OMC session state (claude-code orchestration layer)
+.omc/
