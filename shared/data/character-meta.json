@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "source": "tdata@29c8bb4",
+    "license": "ZUN / Team Shanghai Alice (fan use)",
+    "note": "tdata/db/characters.json의 축소 스냅샷. tvirus 앱이 사용하는 메타만."
+  },
+  "characters": {
+    "cirno": {
+      "name_ko": "치르노",
+      "name_ja": "チルノ",
+      "color": "#7ec8e3"
+    },
+    "reimu_hakurei": {
+      "name_ko": "하쿠레이 레이무",
+      "name_ja": "博麗 霊夢",
+      "color": "#e60012"
+    },
+    "marisa_kirisame": {
+      "name_ko": "키리사메 마리사",
+      "name_ja": "霧雨 魔理沙",
+      "color": "#fff200"
+    },
+    "sakuya_izayoi": {
+      "name_ko": "이자요이 사쿠야",
+      "name_ja": "十六夜 咲夜",
+      "color": "#9d9d9d"
+    },
+    "remilia_scarlet": {
+      "name_ko": "레밀리아 스칼렛",
+      "name_ja": "レミリア・スカーレット",
+      "color": "#c80c2d"
+    },
+    "flandre_scarlet": {
+      "name_ko": "플랑드르 스칼렛",
+      "name_ja": "フランドール・スカーレット",
+      "color": "#ffb533"
+    },
+    "patchouli_knowledge": {
+      "name_ko": "패츌리 널릿지",
+      "name_ja": "パチュリー・ノーレッジ",
+      "color": "#9b59b6"
+    },
+    "hong_meiling": {
+      "name_ko": "홍 메이링",
+      "name_ja": "紅 美鈴",
+      "color": "#27ae60"
+    },
+    "rumia": {
+      "name_ko": "루미아",
+      "name_ja": "ルーミア",
+      "color": "#2c3e50"
+    }
+  }
+}
