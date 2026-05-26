@@ -15,6 +15,7 @@ export default defineConfig({
         'cirno-donation': resolve(__dirname, 'apps/cirno-donation/index.html'),
         'gacha-game': resolve(__dirname, 'apps/gacha-game/index.html'),
         'danmaku-dodge': resolve(__dirname, 'apps/danmaku-dodge/index.html'),
+        'replay-scoreboard': resolve(__dirname, 'apps/replay-scoreboard/index.html'),
       },
     },
   },
