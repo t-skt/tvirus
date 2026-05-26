@@ -16,6 +16,7 @@ export default defineConfig({
         'gacha-game': resolve(__dirname, 'apps/gacha-game/index.html'),
         'danmaku-dodge': resolve(__dirname, 'apps/danmaku-dodge/index.html'),
         'replay-scoreboard': resolve(__dirname, 'apps/replay-scoreboard/index.html'),
+        'touhou-vote-chart': resolve(__dirname, 'apps/touhou-vote-chart/index.html'),
       },
     },
   },
