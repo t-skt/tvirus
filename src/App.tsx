@@ -2,7 +2,7 @@ import { baseUrl } from '@shared/utils/baseUrl';
 
 const apps = [
   { slug: 'cirno-donation', title: '치르노 기부', desc: '⑨', emoji: '🧊', color: '#7ec8e3', ready: true },
-  { slug: 'gacha-game', title: '동방 가챠', desc: '캐릭터 뽑기', emoji: '🎰', color: '#ff66cc', ready: false },
+  { slug: 'gacha-game', title: '동방 가챠', desc: '캐릭터 뽑기', emoji: '🎰', color: '#ff66cc', ready: true },
   { slug: 'danmaku-dodge', title: '탄막 회피', desc: '미니 슈팅', emoji: '🎯', color: '#9933ff', ready: false },
   { slug: 'replay-scoreboard', title: '리플레이 점수판', desc: '점수 시각화', emoji: '📊', color: '#33cc99', ready: false },
   { slug: 'touhou-vote-chart', title: '인기투표 차트', desc: '차트 생성기', emoji: '📈', color: '#ff9933', ready: false },

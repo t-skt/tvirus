@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         'cirno-donation': resolve(__dirname, 'apps/cirno-donation/index.html'),
+        'gacha-game': resolve(__dirname, 'apps/gacha-game/index.html'),
       },
     },
   },
