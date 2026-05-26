@@ -20,6 +20,7 @@ export default defineConfig({
         'introduce-form': resolve(__dirname, 'apps/introduce-form/index.html'),
         'character-tool': resolve(__dirname, 'apps/character-tool/index.html'),
         'shisensho': resolve(__dirname, 'apps/shisensho/index.html'),
+        'touhou-favorites-chart': resolve(__dirname, 'apps/touhou-favorites-chart/index.html'),
       },
     },
   },
