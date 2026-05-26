@@ -17,6 +17,7 @@ export default defineConfig({
         'danmaku-dodge': resolve(__dirname, 'apps/danmaku-dodge/index.html'),
         'replay-scoreboard': resolve(__dirname, 'apps/replay-scoreboard/index.html'),
         'touhou-vote-chart': resolve(__dirname, 'apps/touhou-vote-chart/index.html'),
+        'introduce-form': resolve(__dirname, 'apps/introduce-form/index.html'),
       },
     },
   },
