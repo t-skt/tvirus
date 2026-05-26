@@ -7,7 +7,7 @@ const apps = [
   { slug: 'replay-scoreboard', title: '리플레이 점수판', desc: '점수 시각화', emoji: '📊', color: '#33cc99', ready: true },
   { slug: 'touhou-vote-chart', title: '인기투표 차트', desc: '차트 생성기', emoji: '📈', color: '#ff9933', ready: true },
   { slug: 'introduce-form', title: '소개 카드', desc: '카드 생성기', emoji: '💳', color: '#cc6699', ready: true },
-  { slug: 'character-tool', title: '캐릭터 툴', desc: 'AA 생성기', emoji: '🛠️', color: '#666699', ready: false },
+  { slug: 'character-tool', title: '캐릭터 툴', desc: 'AA 생성기', emoji: '🛠️', color: '#666699', ready: true },
   { slug: 'shisensho', title: '시센쇼', desc: '마작 퍼즐', emoji: '🀄', color: '#cc3333', ready: false },
   { slug: 'touhou-favorites-chart', title: '동방 즐겨찾기', desc: '취향 차트', emoji: '⭐', color: '#ffcc00', ready: false },
 ];
