@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        'cirno-donation': resolve(__dirname, 'apps/cirno-donation/index.html'),
       },
     },
   },
