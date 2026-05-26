@@ -40,4 +40,9 @@ tvirus/
 
 ## 라이선스
 
-MIT — Team SKT
+이미지: ZUN/Team Shanghai Alice. 자세한 사항은 [twiki LICENSE-IMAGES.md](https://github.com/t-skt/twiki/blob/main/LICENSE-IMAGES.md) 참조.
+
+## 관련 레포
+
+- 위키: [t-skt/twiki](https://github.com/t-skt/twiki)
+- 데이터 소스: [t-skt/tdata](https://github.com/t-skt/tdata)
