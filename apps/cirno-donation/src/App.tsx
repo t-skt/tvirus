@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import styles from './styles.module.css';
 import './animations.css';
+import { baseUrl } from '@shared/utils/baseUrl';
 
 // ===== Constants =====
 const TIME_LIMIT = 10; // seconds
@@ -658,12 +659,12 @@ export default function CirnoDonation() {
       <div className={styles.characters}>
         <div className={styles.characterSlot}>
           <div className={`${styles.speechBubble} ${styles.speechCirno}`}>{foolMessage ? foolMessage.cirno : getCirnoLine(count)}</div>
-          <img className={styles.characterImg} src={`${import.meta.env.BASE_URL}dot/cirno.png`} alt="치르노" />
+          <img className={styles.characterImg} src={baseUrl('dot/cirno.png')} alt="치르노" />
           <span className={styles.characterName}>{'치르노'}</span>
         </div>
         <div className={styles.characterSlot}>
           <div className={`${styles.speechBubble} ${styles.speechReimu}`}>{foolMessage ? foolMessage.reimu : getReimuLine(count)}</div>
-          <img className={styles.characterImg} src={`${import.meta.env.BASE_URL}dot/reimu_hakurei.png`} alt="레이무" />
+          <img className={styles.characterImg} src={baseUrl('dot/reimu_hakurei.png')} alt="레이무" />
           <span className={styles.characterName}>{'레이무'}</span>
         </div>
       </div>

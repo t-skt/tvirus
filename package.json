@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "tvirus",
   "version": "1.0.0",
   "description": "**Touhou 인터랙티브 앱 모음** — Team SKT의 동방 기반 장난감/실험.",
@@ -6,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,13 @@
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.4.0",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
     "vite": "^8.0.14"
   }
 }
