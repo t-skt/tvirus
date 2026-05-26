@@ -19,6 +19,7 @@ export default defineConfig({
         'touhou-vote-chart': resolve(__dirname, 'apps/touhou-vote-chart/index.html'),
         'introduce-form': resolve(__dirname, 'apps/introduce-form/index.html'),
         'character-tool': resolve(__dirname, 'apps/character-tool/index.html'),
+        'shisensho': resolve(__dirname, 'apps/shisensho/index.html'),
       },
     },
   },

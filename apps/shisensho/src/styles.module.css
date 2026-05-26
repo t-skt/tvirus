@@ -1,0 +1,17 @@
+@keyframes shisenshoFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes shisenshoBlink {
+  0% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.fadePath {
+  animation: shisenshoFade 0.6s ease-out forwards;
+}
+
+.blinkHint {
+  animation: shisenshoBlink 0.5s ease-in-out infinite alternate;
+}
