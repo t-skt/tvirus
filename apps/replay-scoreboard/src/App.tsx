@@ -115,10 +115,8 @@ function ReplayScoreboardInner() {
     try {
       const el = captureRef.current;
       el.classList.add(styles.captureMode);
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const bgColor = isDark ? '#1b1b1d' : '#ffffff';
       const canvas = await html2canvas(el, {
-        backgroundColor: bgColor,
+        backgroundColor: '#ffffff',
         scale: 2,
         useCORS: true,
       });
