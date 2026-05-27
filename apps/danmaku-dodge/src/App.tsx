@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { baseUrl } from "@shared/utils/baseUrl";
 
 // ─── Sprite list ────────────────────────────────────────────────────────────
@@ -453,6 +453,16 @@ export default function DanmakuDodge(): React.ReactElement {
 
   // ─── Spawning logic ───────────────────────────────────────────────────
 
+  // Precompute non-player sprite pool; recomputed only when player sprite changes.
+  const spawnableSprites = useMemo(
+    () => ALL_SPRITES.filter((s) => s !== playerSprite),
+    [playerSprite],
+  );
+  const spawnableSpritesRef = useRef(spawnableSprites);
+  useEffect(() => {
+    spawnableSpritesRef.current = spawnableSprites;
+  }, [spawnableSprites]);
+
   const spawnBullets = useCallback(
     (gs: GameState, dt: number) => {
       const diff = DIFFICULTIES[difficultyRef.current];
@@ -552,7 +562,7 @@ export default function DanmakuDodge(): React.ReactElement {
             y: oy,
             vx: ovx,
             vy: ovy,
-            sprite: pickRandom(ALL_SPRITES.filter((s) => s !== playerSpriteRef.current)),
+            sprite: pickRandom(spawnableSpritesRef.current),
             size: 32, // 2x scale
           });
           playCharSpawn(soundOnRef.current);
