@@ -3,6 +3,7 @@ import { baseUrl } from "@shared/utils/baseUrl";
 import styles from "./styles.module.css";
 import {
   CHARACTER_DOC_MAP,
+  resolveCharacterDocUrl,
   DIFF_CONFIG,
   type Difficulty,
   type GameState,
@@ -638,7 +639,9 @@ export default function Shisensho(): React.ReactElement {
                   return (
                     <a
                       key={sprite}
-                      href={docPath}
+                      href={resolveCharacterDocUrl(docPath)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       title={label}
                       style={{ lineHeight: 0 }}
                     >
@@ -747,7 +750,9 @@ export default function Shisensho(): React.ReactElement {
                       />
                       {docPath ? (
                         <a
-                          href={docPath}
+                          href={resolveCharacterDocUrl(docPath)}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           style={{
                             color: spriteColor(sprite).border,
                             textDecoration: "none",

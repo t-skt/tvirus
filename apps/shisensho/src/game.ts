@@ -144,6 +144,14 @@ export const ALL_SPRITES = [
 
 // ─── Character doc links ────────────────────────────────────────────────────
 
+// Cross-site target: twiki (Korean Touhou wiki) hosted at the same GH Pages org.
+const TWIKI_ORIGIN = "https://t-skt.github.io/twiki";
+
+export function resolveCharacterDocUrl(docPath: string): string {
+  if (/^https?:\/\//.test(docPath)) return docPath;
+  return TWIKI_ORIGIN + (docPath.startsWith("/") ? docPath : "/" + docPath);
+}
+
 export const CHARACTER_DOC_MAP: Record<string, string> = {
   // Th06
   rumia: "/docs/th06/characters/rumia",
