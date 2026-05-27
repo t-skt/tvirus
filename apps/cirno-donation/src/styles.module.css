@@ -8,13 +8,14 @@
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
+  color: #1c1e21;
 }
 
 /* ===== Timer ===== */
 .timerBar {
   width: 100%;
   height: 6px;
-  background: var(--ifm-color-emphasis-200);
+  background: #e4e6eb;
   border-radius: 3px;
   margin-bottom: 12px;
   overflow: hidden;
@@ -40,7 +41,7 @@
 .timerText {
   font-size: 14px;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-600);
+  color: #606770;
   margin-bottom: 8px;
   font-family: 'Courier New', monospace;
 }
@@ -172,14 +173,14 @@
 .characterName {
   font-size: 11px;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-700);
+  color: #4a4a4a;
 }
 
 /* ===== Speech Bubbles ===== */
 .speechBubble {
   position: relative;
-  background: var(--ifm-background-surface-color, #fff);
-  border: 2px solid var(--ifm-color-emphasis-300);
+  background: #fff;
+  border: 2px solid #d0d0d0;
   border-radius: 12px;
   padding: 8px 12px;
   font-size: 13px;
@@ -192,6 +193,7 @@
   max-width: 180px;
   word-break: keep-all;
   transition: all 0.3s ease;
+  color: #1c1e21;
 }
 
 .speechBubble::after {
@@ -204,7 +206,7 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid var(--ifm-color-emphasis-300);
+  border-top: 8px solid #d0d0d0;
 }
 
 .speechCirno {
@@ -230,14 +232,14 @@
 
 .amountLabel {
   font-size: 13px;
-  color: var(--ifm-color-emphasis-600);
+  color: #606770;
   margin-bottom: 4px;
 }
 
 .amountValue {
   font-size: 36px;
   font-weight: 900;
-  color: var(--ifm-color-primary);
+  color: #2563eb;
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
   transition: transform 0.1s ease;
@@ -249,7 +251,7 @@
 
 .clickCount {
   font-size: 12px;
-  color: var(--ifm-color-emphasis-500);
+  color: #80868b;
   margin-top: 4px;
 }
 
@@ -296,14 +298,14 @@
 .resultTitle {
   font-size: 24px;
   font-weight: 900;
-  color: var(--ifm-color-primary);
+  color: #2563eb;
   margin-bottom: 16px;
 }
 
 .resultAmount {
   font-size: 40px;
   font-weight: 900;
-  color: var(--ifm-color-primary);
+  color: #2563eb;
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
   margin-bottom: 8px;
@@ -311,7 +313,7 @@
 
 .resultClicks {
   font-size: 14px;
-  color: var(--ifm-color-emphasis-600);
+  color: #606770;
   margin-bottom: 24px;
 }
 
@@ -345,7 +347,7 @@
 
 .bestRecord {
   font-size: 13px;
-  color: var(--ifm-color-emphasis-500);
+  color: #80868b;
   margin-top: 8px;
 }
 
@@ -361,9 +363,9 @@
 .milestonesTitle {
   font-size: 14px;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-700);
+  color: #4a4a4a;
   margin-bottom: 8px;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid #e4e6eb;
   padding-bottom: 4px;
 }
 
@@ -373,13 +375,13 @@
   gap: 8px;
   padding: 4px 0;
   font-size: 13px;
-  color: var(--ifm-color-emphasis-600);
+  color: #606770;
   animation: milestoneAppear 0.3s ease-out;
 }
 
 .milestoneItem:last-child {
   font-weight: 700;
-  color: var(--ifm-color-primary);
+  color: #2563eb;
 }
 
 @keyframes milestoneAppear {
@@ -476,24 +478,6 @@
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; }
-}
-
-/* ===== Dark Mode ===== */
-[data-theme='dark'] .shrineBody {
-  background: #3e2c1a;
-  border-color: #8b6914;
-}
-
-[data-theme='dark'] .donationBox {
-  background: linear-gradient(180deg, #3e2409 0%, #2a1805 100%);
-}
-
-[data-theme='dark'] .amountValue {
-  text-shadow: 0 0 20px rgba(79, 195, 247, 0.3);
-}
-
-[data-theme='dark'] .donateButton {
-  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.25);
 }
 
 /* ===== Responsive ===== */
@@ -674,7 +658,7 @@
 
 .fakeErrorMsg {
   font-size: 14px;
-  color: var(--ifm-color-emphasis-700);
+  color: #4a4a4a;
   margin-bottom: 12px;
 }
 
