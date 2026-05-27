@@ -11,6 +11,26 @@ declare global {
   }
 }
 
+const PLOTLY_CDN_URL = 'https://cdn.plot.ly/plotly-2.35.2.min.js';
+let plotlyLoadPromise: Promise<void> | null = null;
+
+function loadPlotly(): Promise<void> {
+  if (typeof window !== 'undefined' && window.Plotly) return Promise.resolve();
+  if (plotlyLoadPromise) return plotlyLoadPromise;
+  plotlyLoadPromise = new Promise<void>((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = PLOTLY_CDN_URL;
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => {
+      plotlyLoadPromise = null;
+      reject(new Error('Plotly CDN load failed'));
+    };
+    document.head.appendChild(script);
+  });
+  return plotlyLoadPromise;
+}
+
 export default function TouhouVoteChart(): React.JSX.Element {
   const [selectedCharacters, setSelectedCharacters] = useState<Set<string>>(
     new Set()
@@ -132,15 +152,11 @@ export default function TouhouVoteChart(): React.JSX.Element {
   // 차트 렌더링
   useEffect(() => {
     if (!chartRef.current || selectedCharacters.size === 0) return;
-
-    if (typeof window !== 'undefined' && window.Plotly) {
-      renderChart();
-    } else {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.plot.ly/plotly-2.35.2.min.js';
-      script.onload = renderChart;
-      document.head.appendChild(script);
-    }
+    loadPlotly()
+      .then(renderChart)
+      .catch((err) => {
+        console.error(err);
+      });
   }, [selectedCharacters]);
 
   const renderChart = () => {
