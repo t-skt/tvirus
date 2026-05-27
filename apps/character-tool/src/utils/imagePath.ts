@@ -1,3 +1,5 @@
-export const getImagePath = (gameId: string, imageName: string): string => {
-  return `/tvirus/img/${gameId}/${imageName}`;
-};
+import { baseUrl } from '@shared/utils/baseUrl';
+
+export function getImagePath(gameId: string, imageName: string): string {
+  return baseUrl(`img/${gameId}/${imageName}`);
+}
