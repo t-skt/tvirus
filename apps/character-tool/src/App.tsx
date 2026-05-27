@@ -173,15 +173,6 @@ const CharacterTool: React.FC = () => {
     [placedTexts]
   );
 
-  const handlePanStart = useCallback((e: React.MouseEvent) => {
-    setIsPanning(true);
-    setPanStart({ x: e.clientX, y: e.clientY });
-  }, []);
-
-  const handlePanEnd = useCallback(() => {
-    setIsPanning(false);
-  }, []);
-
   const handleMouseUp = useCallback(() => {
     setIsDragging(false);
     setDragTarget(null);
@@ -535,9 +526,6 @@ const CharacterTool: React.FC = () => {
     document.addEventListener('keydown', handleKeyDown);
     return () => { document.removeEventListener('keydown', handleKeyDown); };
   }, [handleKeyDown]);
-
-  // suppress unused warning for handlePanEnd
-  void handlePanEnd;
 
   return (
     <div className={styles.container}>

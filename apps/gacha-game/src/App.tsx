@@ -109,9 +109,6 @@ const GachaGame: React.FC = () => {
 
   const flashTimerRef = useRef<number | null>(null);
 
-  const currentCategory = CATEGORIES.find((cat) => cat.id === selectedCategory);
-  void currentCategory;
-
   useEffect(() => {
     return () => {
       if (flashTimerRef.current != null) {
