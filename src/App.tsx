@@ -10,6 +10,7 @@ const apps = [
   { slug: 'character-tool', title: '캐릭터 툴', desc: 'AA 생성기', emoji: '🛠️', color: '#666699', ready: true },
   { slug: 'shisensho', title: '시센쇼', desc: '마작 퍼즐', emoji: '🀄', color: '#cc3333', ready: true },
   { slug: 'touhou-favorites-chart', title: '동방 즐겨찾기', desc: '취향 차트', emoji: '⭐', color: '#ffcc00', ready: true },
+  { slug: 'fortune-slip', title: '오늘의 신사', desc: '동방환존신첨', emoji: '🎴', color: '#ff4444', ready: true },
 ];
 
 export default function App() {

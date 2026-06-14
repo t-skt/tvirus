@@ -21,6 +21,7 @@ export default defineConfig({
         'character-tool': resolve(__dirname, 'apps/character-tool/index.html'),
         'shisensho': resolve(__dirname, 'apps/shisensho/index.html'),
         'touhou-favorites-chart': resolve(__dirname, 'apps/touhou-favorites-chart/index.html'),
+        'fortune-slip': resolve(__dirname, 'apps/fortune-slip/index.html'),
       },
     },
   },
