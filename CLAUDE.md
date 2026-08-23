@@ -22,7 +22,7 @@ cp apps/cirno-donation/index.html apps/new-app/index.html
 
 # 4. vite.config.ts의 rollupOptions.input에 추가
 
-# 5. 메인 index.html(앱 갤러리)에 카드 추가
+# 5. src/apps.ts에 등록: APP_SLUGS에 슬러그 추가 + RECORDS에 category/dot 기록 추가
 
 # 6. 로컬 dev
 pnpm dev
@@ -30,8 +30,10 @@ pnpm dev
 
 ## 공통 에셋 사용법
 - 이미지: `@shared/assets/characters/cirno.webp`
-- 캐릭터 메타: `import { CHARACTERS } from '@shared/data/character-meta'`
-- 공통 UI: `import { FrameCounter, Button } from '@shared/components'`
+- 동방 데이터셋(v1/v2 touhou_normalized*.json): `import { parseDataset, loadTouhouDataset, type Character, type Work, type TouhouDataset } from '@shared/data/touhou'`
+- 훅: `import { useDataset, useLocalStorage } from '@shared/hooks'`
+- 효과 컴포넌트(TH06~TH20): `import { EffectRenderer, ALL_EFFECT_IDS, type EffectId } from '@shared/components/effects'`
+- 베이스 URL: `import { baseUrl } from '@shared/utils/baseUrl'`
 
 ## 빌드/배포 방법
 - `pnpm build` → `dist/` 생성 (각 앱 sub-directory에 빌드됨)
