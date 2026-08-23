@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<script>
+  // SPA fallback: route /tvirus/apps/introduce/concept/* to the introduce app shell.
+  var p = location.pathname;
+  if (p.indexOf('/apps/introduce/') !== -1) {
+    location.replace(p.substring(0, p.indexOf('/apps/introduce/') + '/apps/introduce/'.length));
+  } else {
+    // Unknown deep link → gallery home
+    location.replace(p.replace(/\/[^\/]*$/, '/') || '/');
+  }
+</script>
+</head>
+<body></body>
+</html>

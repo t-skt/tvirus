@@ -20,6 +20,8 @@ pnpm build                    # 정적 빌드 (dist/)
 - `gacha-game` — 캐릭터 가챠
 - `shisensho` — 사천성
 - `character-tool` — 캐릭터 캔버스/도구
+- `introduce` — 트친소 카드 메이커 (15컨셉 × 6테마 × 3언어)
+- `introduce-form` — 동방 자기소개표
 - `replay-scoreboard` — 리플레이 스코어보드
 
 ## 구조
@@ -27,7 +29,13 @@ pnpm build                    # 정적 빌드 (dist/)
 ```
 tvirus/
 ├── apps/                # 각 앱 entry point + src/
-├── shared/              # 공통 에셋 / 컴포넌트 / 데이터
+│   └── <app>/src/       # App.tsx(조합) + types/data/hooks/components
+├── shared/              # 공통 계층
+│   ├── data/touhou/     # 통합 데이터셋 타입/파서/로더 (v1+v2)
+│   ├── hooks/           # useDataset / useLocalStorage / useIsMobile
+│   ├── components/      # effects/ (TH06~TH20 효과)
+│   ├── utils/           # baseUrl
+│   └── assets/          # 캐릭터 이미지 (characters/ dot/ toy/)
 ├── vite.config.ts       # multi-page mode
 └── .github/workflows/   # GitHub Pages 배포
 ```
